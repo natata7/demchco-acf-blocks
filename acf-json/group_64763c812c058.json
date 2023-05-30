@@ -1,9 +1,9 @@
 {
-    "key": "group_6361413178825",
-    "title": "Блок: Фото дня",
+    "key": "group_64763c812c058",
+    "title": "Блок: Анонс події",
     "fields": [
         {
-            "key": "field_636141317b9ad",
+            "key": "field_64763c813978f",
             "label": "",
             "name": "",
             "aria-label": "",
@@ -17,35 +17,12 @@
                 "id": ""
             },
             "wpml_cf_preferences": 0,
-            "message": "<h2>Фото дня<\/h2>",
+            "message": "<h2>Анонс події<\/h2>",
             "new_lines": "wpautop",
             "esc_html": 0
         },
         {
-            "key": "field_636141317f22f",
-            "label": "Image",
-            "name": "image",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "group_61e58e490f037"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0,
-            "parent_repeater": "field_6328abf214941"
-        },
-        {
-            "key": "field_636141317f239",
+            "key": "field_64763c81397ff",
             "label": "Заголовок",
             "name": "heading",
             "aria-label": "",
@@ -66,7 +43,36 @@
             "append": ""
         },
         {
-            "key": "field_636141317f23e",
+            "key": "field_64763ca2f66a9",
+            "label": "Публікація анонсу події",
+            "name": "event",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "post_type": [
+                "publications"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": [
+                "section:podiyi"
+            ],
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 1
+        },
+        {
+            "key": "field_64763c8139836",
             "label": "Підпис",
             "name": "content",
             "aria-label": "",
@@ -85,27 +91,6 @@
             "rows": "",
             "placeholder": "",
             "new_lines": "br"
-        },
-        {
-            "key": "field_636141317f235",
-            "label": "Автор",
-            "name": "author",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "wpml_cf_preferences": 0,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -113,7 +98,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "demchco\/photo-of-the-day"
+                "value": "demchco\/announcement"
             }
         ]
     ],
@@ -127,5 +112,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "advanced",
-    "modified": 1685472994
+    "modified": 1685473044
 }

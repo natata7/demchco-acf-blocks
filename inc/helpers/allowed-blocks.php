@@ -24,6 +24,7 @@ function allowed_blocks($abs_allowed_blocks)
 		'core/file',
 		'core/video',
 		'core/audio',
+		'core/shortcode',
 	];
 
 	// Add ACF blocks.
