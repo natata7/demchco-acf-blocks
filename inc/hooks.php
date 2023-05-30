@@ -1,0 +1,53 @@
+<?php
+/**
+ * Hooks and filters.
+ */
+
+namespace demchco\blocks;
+
+/**
+ * Specify the location for saving ACF JSON files.
+ *
+ * @param string $path The path we're saving the files.
+ * @return string $path
+ */
+function blocks_acf_json_save_point( $path ) {
+
+	// Update the path.
+	$path = plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';
+
+	return $path;
+}
+add_filter( 'acf/settings/save_json', __NAMESPACE__ . '\blocks_acf_json_save_point' );
+
+/**
+ * Specify the location for loading ACF JSON files.
+ *
+ * @param string $paths The paths from which we're loading the files.
+ * @return string $paths
+ */
+function acf_blocks_acf_json_load_point( $paths ) {
+
+	// Remove original path (optional).
+	unset( $paths[0] );
+
+	// Append the new path.
+	$paths[] = plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';
+
+	return $paths;
+}
+add_filter( 'acf/settings/load_json', __NAMESPACE__ . '\acf_blocks_acf_json_load_point' );
+
+/**
+ * Load block assets only if the block exists on the page.
+ *
+ * @see https://developer.wordpress.org/reference/hooks/should_load_separate_core_block_assets/
+ */
+add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
+/**
+ * Disable the custom color picker as we don't support the classes it adds.
+ *
+ * @see https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/#disabling-custom-colors-in-block-color-palettes
+ */
+add_theme_support( 'disable-custom-colors' );

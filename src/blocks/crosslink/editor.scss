@@ -1,0 +1,40 @@
+// Editor styles.
+
+.demchco-block-crosslink {
+	position: relative;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.crosslink {
+		&-wrap {
+			background-color: var(--wp--preset--color--background);;
+			padding: 20px 16px 40px 30px;
+			position: relative;
+		}
+
+		&__title {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+			margin: 0;
+		}
+
+		&__introduction {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 160%;
+			margin-bottom: 14px;
+			width: 100%;
+		}
+
+		&__section {
+			font-weight: 600;
+			font-size: 14px;
+			line-height: 150%;
+			display: inline-flex;
+			align-items: center;
+		}
+	}
+}

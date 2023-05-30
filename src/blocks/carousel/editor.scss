@@ -1,0 +1,94 @@
+//----------------------------------------
+// Block - Carousel Styles, EDITOR
+//----------------------------------------
+
+.carousel-wrap {
+	&__bottom-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		flex-wrap: wrap;
+
+		&:after {
+			width: 100%;
+			height: 1px;
+			opacity: 0.4;
+			display: block;
+			content: '';
+			position: absolute;
+			z-index: -1;
+		}
+	}
+	.gallery-bottom {
+		width: 508px;
+		padding: 20px 0;
+
+	}
+	.gallery-slider {
+		overflow: hidden;
+
+		// .carousel-item {
+		// 	width: 100%;
+		// 	height: 0;
+		// 	padding-bottom: 63%;
+		// 	overflow: hidden;
+		// 	position: relative;
+		// }
+
+		// img,
+		// .wp-block-image {
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	object-fit: cover;
+		// }
+
+		.swiper-slide {
+			cursor: pointer;
+		}
+
+		&-bottom-item {
+			border: 1px solid transparent;
+			width: 100px;
+		}
+	}
+
+	&__pagination-wrap {
+		background: white;
+	}
+
+	.slider-pagination {
+		padding: 14px 0;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 90%;
+		width: 68px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0.5;
+
+		span {
+			margin: 0 3px;
+		}
+	}
+	.slider-button-prev {
+		svg {
+			transform: rotate(-180deg);
+			pointer-events: inherit;
+			margin: 0;
+		}
+	}
+
+	&__nav-wrap {
+		display: flex;
+		column-gap: 20px;
+
+		.btn:hover{
+			opacity: .8;
+		}
+	}
+}

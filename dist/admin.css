@@ -1,0 +1,1 @@
+.acf-block-preview .acf-innerblocks-container,.acf-block-preview .acf-innerblocks-container:empty:before,.acf-block-preview .acf-innerblocks-container[data-rich-text-placeholder]{@apply text-gray-300 content-["Drag_in_InnerBlocks_here"] left-1/2 absolute text-center top-1/2 w-full -translate-y-1/2 -translate-x-1/2}html :where(.wp-block){@apply max-w-none}
