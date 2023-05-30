@@ -11,7 +11,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class'       => [ 'wds-module', 'wds-module-hero' ],
+	'class'       => [ 'demchco-module', 'demchco-module-hero' ],
 	'image'       => false,
 	'overlay'     => false,
 	'eyebrow'     => false,

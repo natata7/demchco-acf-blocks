@@ -16,7 +16,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class'       => [ 'wds-module', 'wds-module-notification' ],
+	'class'       => [ 'demchco-module', 'demchco-module-notification' ],
 	'text_args'   => [],
 	'icon'        => [],
 	'dismissible' => false,

@@ -12,7 +12,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class'       => [ 'wds-module', 'wds-module-search' ],
+	'class'       => [ 'demchco-module', 'demchco-module-search' ],
 	'action'      => home_url( '/' ),
 	'method'      => 'get',
 	'placeholder' => false,

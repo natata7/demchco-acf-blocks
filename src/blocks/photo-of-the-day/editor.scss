@@ -1,0 +1,23 @@
+// Editor styles.
+.photo-of-the-day{
+
+	&__caption-wrap {
+		margin: 26px 0;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 160%;
+	}
+
+	&__author-wrap {
+		margin-top: 16px;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 100%;
+	}
+	&__author {
+		margin-top: 16px;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 100%;
+	}
+}

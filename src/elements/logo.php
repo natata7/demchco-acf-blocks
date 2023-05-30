@@ -12,7 +12,7 @@ use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\get_attachment_id_from_url;
 
 $abs_defaults = [
-	'class'     => [ 'wds-element', 'wds-element-logo' ],
+	'class'     => [ 'demchco-element', 'demchco-element-logo' ],
 	'logo_name' => '',
 	'loading'   => 'eager',
 	'alt'       => get_bloginfo( 'name' ) . ' logo',

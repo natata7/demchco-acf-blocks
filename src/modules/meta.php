@@ -32,7 +32,7 @@ use function demchco\blocks\print_post_date;
 use function demchco\blocks\print_post_taxonomies;
 
 $abs_defaults = [
-	'class'            => [ 'wds-module', 'wds-module-meta', 'entry-meta' ],
+	'class'            => [ 'demchco-module', 'demchco-module-meta', 'entry-meta' ],
 	'display_date'     => true,
 	'display_author'   => true,
 	'display_taxonomy' => false,

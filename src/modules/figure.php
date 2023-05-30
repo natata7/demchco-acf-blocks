@@ -12,7 +12,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class'         => [ 'wds-module', 'wds-module-figure' ],
+	'class'         => [ 'demchco-module', 'demchco-module-figure' ],
 	'image_class'   => [],
 	'attachment_id' => false,
 	'src'           => false,

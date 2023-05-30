@@ -12,7 +12,7 @@ use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\print_svg;
 
 $abs_defaults = [
-	'class'         => [ 'wds-element', 'wds-element-button' ],
+	'class'         => [ 'demchco-element', 'demchco-element-button' ],
 	'id'            => '',
 	'title'         => false,
 	'url'           => false,

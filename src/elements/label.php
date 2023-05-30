@@ -11,7 +11,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class' => [ 'wds-element', 'wds-element-button' ],
+	'class' => [ 'demchco-element', 'demchco-element-button' ],
 	'text'  => false,
 	'for'   => false,
 ];

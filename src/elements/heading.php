@@ -11,7 +11,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class' => [ 'wds-element', 'wds-element-heading' ],
+	'class' => [ 'demchco-element', 'demchco-element-heading' ],
 	'id'    => '',
 	'text'  => false,
 	'level' => 2,

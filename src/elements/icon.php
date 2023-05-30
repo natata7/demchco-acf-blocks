@@ -24,7 +24,7 @@ use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\print_svg;
 
 $abs_defaults = [
-	'class'    => [ 'wds-element', 'wds-element-icon' ],
+	'class'    => [ 'demchco-element', 'demchco-element-icon' ],
 	'svg_args' => [],
 ];
 

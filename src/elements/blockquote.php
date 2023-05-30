@@ -11,7 +11,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class' => [ 'wds-element', 'wds-element-blockquote' ],
+	'class' => [ 'demchco-element', 'demchco-element-blockquote' ],
 	'id'    => '',
 	'cite'  => false,
 	'quote' => false,

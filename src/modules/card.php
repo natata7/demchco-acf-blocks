@@ -13,7 +13,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class'         => [ 'wds-module', 'wds-module-card' ],
+	'class'         => [ 'demchco-module', 'demchco-module-card' ],
 	'eyebrow'       => false,
 	'heading'       => false,
 	'content'       => false,

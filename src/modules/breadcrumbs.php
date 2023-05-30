@@ -25,7 +25,7 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
 $abs_defaults = [
-	'class'                => [ 'wds-module', 'wds-module-breadcrumbs' ],
+	'class'                => [ 'demchco-module', 'demchco-module-breadcrumbs' ],
 	'display_current_page' => true,
 	'display_home_icon'    => true,
 	'divider'              => '/', // This should be a UTF-8 icon or text character, such as ▶ (https://utf8-icons.com).
