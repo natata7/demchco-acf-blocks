@@ -1,1 +1,1 @@
-
+.demchco-block-logo-grid{width:100%}.demchco-block-logo-grid .acf-innerblocks-container{grid-column:1/-1}.demchco-block-logo-grid .demchco-grid{display:grid;gap:8rem;grid-template-columns:repeat(2,minmax(0,1fr))}@screen tablet-portrait{.demchco-block-logo-grid .demchco-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@screen tablet-landscape{.demchco-block-logo-grid .demchco-grid{grid-template-columns:repeat(6,minmax(0,1fr))}}.demchco-block-logo-grid .demchco-module-figure{grid-column:span 1/span 1}

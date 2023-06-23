@@ -2,20 +2,21 @@
 // Block - Side by Side
 //----------------------------------------
 
-// .wds-block-side-by-side {
-// 	@apply container;
+.demchco-block-side-by-side {
+	width: 100%;
 
-// 	.wds-grid {
-// 		> * {
-// 			@apply col-span-12;
+	.demchco-grid {
+		grid-template-columns: 1fr 1fr;
+		column-gap: 2em;
+		row-gap: 1em;
+		display: grid;
 
-// 			@screen tablet-portrait {
-// 				@apply col-span-6;
-// 			}
-// 		}
+		> * {
 
-// 		.card-first {
-// 			@apply -order-1;
-// 		}
-// 	}
-// }
+		}
+
+		.card-first {
+			order: -1;
+		}
+	}
+}

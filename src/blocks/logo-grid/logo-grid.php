@@ -13,7 +13,7 @@ $abs_block = isset( $block ) ? $block : '';
 $abs_args  = isset( $args ) ? $args : '';
 
 $abs_defaults = [
-	'class'               => [ 'wds-block', 'wds-block-logo-grid' ],
+	'class'               => [ 'demchco-block', 'demchco-block-logo-grid' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
 	'fields'              => [], // Fields passed via the print_block() function.
@@ -41,7 +41,7 @@ $abs_logo_grid = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : 
 			echo '<InnerBlocks allowedBlocks="' . esc_attr( wp_json_encode( $abs_defaults['allowed_innerblocks'] ) ) . '" />';
 		endif;
 		?>
-		<div class="wds-grid">
+		<div class="demchco-grid">
 			<?php
 			foreach ( $abs_logo_grid['logos'] as $abs_logo ) :
 				print_module(

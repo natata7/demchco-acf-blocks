@@ -13,7 +13,7 @@ $abs_block = isset( $block ) ? $block : '';
 $abs_args  = isset( $args ) ? $args : '';
 
 $abs_defaults = [
-	'class'               => [ 'wds-block', 'wds-block-quotes' ],
+	'class'               => [ 'demchco-block', 'demchco-block-quotes' ],
 	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
 	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
 	'fields'              => [], // Fields passed via the print_block() function.

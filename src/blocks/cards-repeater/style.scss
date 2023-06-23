@@ -2,17 +2,17 @@
 // Block - Card Repeater, FRONTEND
 //----------------------------------------
 
-// .wds-block-cards-repeater {
-// 	@apply container;
+.demchco-block-cards-repeater {
+	width: 100%;
 
-// 	.card-wrap {
-// 		@apply wds-grid;
+	.card-wrap {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 2em;
+		row-gap: 1em;
 
-// 		.wds-module-card {
-// 			@apply col-span-12;
-// 			@screen tablet-portrait {
-// 				@apply col-span-4;
-// 			}
-// 		}
-// 	}
-// }
+		.demchco-module-card {
+			width: 100%;
+		}
+	}
+}

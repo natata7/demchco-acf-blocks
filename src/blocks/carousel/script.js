@@ -8,7 +8,6 @@ import Swiper, {
 	Thumbs,
 } from 'swiper';
 
-// Make sure everything is loaded first.
 if (
 	( 'complete' === document.readyState ||
 		'loading' !== document.readyState ) &&

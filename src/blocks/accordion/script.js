@@ -17,10 +17,10 @@ if (
  */
 function wdsAccordion() {
 	const accordionItems = document.querySelectorAll(
-			'.wds-module-accordion .accordion-item'
+			'.demchco-module-accordion .accordion-item'
 		),
 		accordionTriggers = document.querySelectorAll(
-			'.wds-module-accordion .accordion-title'
+			'.demchco-module-accordion .accordion-title'
 		),
 		showClass = 'accordion-item-is-open';
 

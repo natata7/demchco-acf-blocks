@@ -6,7 +6,7 @@
   "editorScript": "file:./editor.js",
   "style": "file:./style-script.css",
   "script": "file:./script.js",
-  "category": "WDS",
+  "category": "demchco",
   "icon": "images-alt",
   "apiVersion": 2,
   "keywords": [

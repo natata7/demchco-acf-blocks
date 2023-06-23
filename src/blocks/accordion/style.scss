@@ -1,41 +1,56 @@
 //----------------------------------------
 // Block - Accordion Styles, FRONTEND
 //----------------------------------------
-// .wds-block-accordion {
-// 	@apply container;
+.demchco-block-accordion {
+	.demchco-module-accordion {
+		.accordion-item {
 
-// 	.wds-module-accordion {
-// 		.accordion-item {
-// 			@apply mb-8 rounded-md border border-gray-300;
-// 		}
+		}
 
-// 		.accordion-title {
-// 			@apply mb-0 px-24 py-12 flex w-full justify-between items-center rounded-none;
+		.accordion-title {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 0px;
+			border: none;
+			padding: 1rem 2rem;
 
-// 			&:hover,
-// 			&:focus {
-// 				@apply bg-gray-200;
-// 			}
+			&:hover,
+			&:focus {
+				background-color: rgb( 229 231 235 );
+			}
 
-// 			&[aria-expanded='false'] {
-// 				~ div {
-// 					@apply hidden;
-// 				}
-// 			}
+			~ div {
+				overflow: hidden;
+				max-height: 0;
+				transition: all 0.3s ease-in-out;
+			}
 
-// 			&[aria-expanded='true'] {
-// 				~ div {
-// 					@apply block;
-// 				}
+			&[aria-expanded='false'] {
+				~ div {
 
-// 				svg {
-// 					@apply rotate-180 transform transition-all;
-// 				}
-// 			}
-// 		}
+				}
+			}
 
-// 		.accordion-content {
-// 			@apply px-24 py-12;
-// 		}
-// 	}
-// }
+			&[aria-expanded='true'] {
+				~ div {
+					max-height: 1000px;
+				}
+
+				svg {
+					transform: rotate( 180deg );
+					transition: all 0.3s ease;
+				}
+			}
+		}
+
+		.accordion-content {
+			margin-bottom: 0px;
+			padding-left: 6rem;
+			padding-right: 6rem;
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+	}
+}

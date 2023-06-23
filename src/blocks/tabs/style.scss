@@ -1,26 +1,36 @@
 //----------------------------------------
 // Block - Tabs Styles, FRONTEND
 //----------------------------------------
-// .wds-block-tabs {
-// 	@apply container;
+.demchco-block-tabs {
+	width: 100%;
 
-// 	.wds-module-tabs {
-// 		@apply my-32;
+	.demchco-module-tabs {
+		margin-top: 8rem; /* 128px */
+		margin-bottom: 8rem; /* 128px */
 
-// 		nav {
-// 			@apply flex -mb-1;
+		nav {
+			display: flex;
 
-// 			.tab-title {
-// 				@apply flex justify-center py-8 px-16 ml-16 bg-gray-300 border border-gray-300 rounded-md rounded-b-none relative z-10;
+			.tab-title {
+				display: flex;
+				background-color: rgb( 209 213 219 );
+				border: none;
+				justify-content: center;
+				position: relative;
+				padding: 1rem 2rem;
+				z-index: 10;
 
-// 				&[aria-selected='true'] {
-// 					@apply bg-white border-b-white;
-// 				}
-// 			}
-// 		}
+				&[aria-selected='true'] {
+					background: white;
+					border-bottom: 1px solid white;
+				}
+			}
+		}
 
-// 		.tabs-content {
-// 			@apply border border-gray-300 p-16 bg-white rounded-md;
-// 		}
-// 	}
-// }
+		.tabs-content {
+			border-top: 1px solid rgb( 209 213 219 );
+			background: white;
+			padding: 2rem;
+		}
+	}
+}

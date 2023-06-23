@@ -20,8 +20,8 @@ if (
  *
  */
 function wdsTabs() {
-	const tabList = document.querySelector( '.wds-module-tabs nav' );
-	const tabs = document.querySelectorAll( '.wds-module-tabs .tab-title' );
+	const tabList = document.querySelector( '.demchco-module-tabs nav' );
+	const tabs = document.querySelectorAll( '.demchco-module-tabs .tab-title' );
 
 	// Add a click event handler to each tab
 	tabs.forEach( ( tab ) => {
