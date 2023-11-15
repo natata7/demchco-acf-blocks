@@ -7,7 +7,7 @@ namespace demchco\blocks;
 
 // Import wpcli.
 
-use \WP_CLI as WP_CLI;
+use WP_CLI;
 
 /**
  * Class Blocks_Scaffold
@@ -62,13 +62,13 @@ class Blocks_Scaffold {
 		// Merge with default args.
 		$args = wp_parse_args(
 			$assoc_args,
-			[
+			array(
 				'title'     => ucfirst( $this->name ),
 				'desc'      => '',
 				'keywords'  => strtolower( $this->name ),
 				'icon'      => 'table-row-before',
 				'namespace' => 'demchco/',
-			]
+			)
 		);
 
 		// create the directory.
@@ -142,7 +142,6 @@ class Blocks_Scaffold {
 		} else {
 			WP_CLI::error( 'ERROR :: Could not create a render file.', true );
 		}
-
 	}
 
 	/**
@@ -163,7 +162,6 @@ class Blocks_Scaffold {
 		if ( ! $this->init_filesystem()->put_contents( DEMCHCO_ROOT_PATH . 'src/blocks/' . $this->name . '/tailwind.config.js', $content ) ) {
 			WP_CLI::error( 'ERROR :: Could not create a block json file.', true );
 		}
-
 	}
 
 
@@ -179,22 +177,22 @@ class Blocks_Scaffold {
 		if ( $this->init_filesystem()->exists( $local_file ) ) {
 			$content = $this->init_filesystem()->get_contents( $local_file );
 			$content = str_replace(
-				[
+				array(
 					'{{name}}',
 					'{{title}}',
 					'{{description}}',
 					'{{icon}}',
 					'demchco/',
 					'{{keyword}}',
-				],
-				[
+				),
+				array(
 					$this->name,
 					$args['title'],
 					$args['desc'],
 					$args['icon'],
 					trailingslashit( $args['namespace'] ),
 					$args['keyword'],
-				],
+				),
 				$content
 			);
 		}
@@ -227,7 +225,6 @@ class Blocks_Scaffold {
 		if ( ! $this->init_filesystem()->copy( $assets_css, DEMCHCO_ROOT_PATH . 'src/blocks/' . $this->name . '/editor.scss' ) ) {
 			WP_CLI::error( 'ERROR :: Could not create editor js file.', true );
 		}
-
 	}
 
 	/**
@@ -250,9 +247,7 @@ class Blocks_Scaffold {
 		if ( ! $this->init_filesystem()->copy( $assets_css, DEMCHCO_ROOT_PATH . 'src/blocks/' . $this->name . '/style.scss' ) ) {
 			WP_CLI::error( 'ERROR :: Could not create editor js file.', true );
 		}
-
 	}
-
 }
 
 /**

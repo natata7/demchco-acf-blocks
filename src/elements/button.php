@@ -11,24 +11,24 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\print_svg;
 
-$abs_defaults = [
-	'class'         => [ 'demchco-element', 'demchco-element-button' ],
+$abs_defaults = array(
+	'class'         => array( 'demchco-element', 'demchco-element-button' ),
 	'id'            => '',
 	'title'         => false,
 	'url'           => false,
 	'target'        => false,
 	'type'          => false,
-	'icon'          => [],
+	'icon'          => array(),
 	'icon_position' => 'after', // before, after.
 	'role'          => '',
-	'aria'          => [
+	'aria'          => array(
 		'controls' => '',
 		'disabled' => false,
 		'expanded' => false,
 		'label'    => false,
 		'current'  => '',
-	],
-];
+	),
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -44,7 +44,7 @@ if ( $abs_args['title'] || $abs_args['icon'] ) :
 	endif;
 
 	// Set up element attributes.
-	$abs_atts = get_formatted_atts( [ 'id', 'href', 'target', 'class', 'type', 'aria', 'role' ], $abs_args );
+	$abs_atts = get_formatted_atts( array( 'id', 'href', 'target', 'class', 'type', 'aria', 'role' ), $abs_args );
 
 	?>
 	<<?php echo $abs_args['href'] ? 'a' : 'button'; ?> <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>

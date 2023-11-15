@@ -11,9 +11,9 @@ use function demchco\blocks\print_element;
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class'         => [ 'demchco-module', 'demchco-module-figure' ],
-	'image_class'   => [],
+$abs_defaults = array(
+	'class'         => array( 'demchco-module', 'demchco-module-figure' ),
+	'image_class'   => array(),
 	'attachment_id' => false,
 	'src'           => false,
 	'size'          => 'fullsize',
@@ -21,7 +21,7 @@ $abs_defaults = [
 	'alt'           => false,
 	'show_caption'  => false,
 	'caption'       => false,
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -30,21 +30,21 @@ if ( $abs_args['show_caption'] && $abs_args['caption'] ) :
 endif;
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 ?>
 
 <figure <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<?php
 	print_element(
 		'image',
-		[
+		array(
 			'attachment_id' => $abs_args['attachment_id'],
 			'class'         => $abs_args['image_class'],
 			'src'           => $abs_args['src'],
 			'size'          => $abs_args['size'],
 			'loading'       => $abs_args['loading'],
 			'alt'           => $abs_args['alt'],
-		]
+		)
 	);
 	?>
 

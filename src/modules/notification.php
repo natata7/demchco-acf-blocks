@@ -15,16 +15,16 @@ use function demchco\blocks\print_element;
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class'       => [ 'demchco-module', 'demchco-module-notification' ],
-	'text_args'   => [],
-	'icon'        => [],
+$abs_defaults = array(
+	'class'       => array( 'demchco-module', 'demchco-module-notification' ),
+	'text_args'   => array(),
+	'icon'        => array(),
 	'dismissible' => false,
-	'type'        => [
+	'type'        => array(
 		'sticky'   => true,
 		'position' => 'top',
-	],
-];
+	),
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -42,7 +42,7 @@ $abs_args['role'] = $abs_args['dismissible'] ? 'alertdialog' : 'alert';
 $abs_args['aria']['labelledby'] = 'notification-title';
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class', 'role', 'aria', 'id' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class', 'role', 'aria', 'id' ), $abs_args );
 
 // Make sure the notification title has an id for accessibility.
 if ( empty( $abs_args['text_args']['id'] ) ) :
@@ -60,25 +60,25 @@ endif;
 			// This is dismissible, so let's render a close button.
 			print_element(
 				'button',
-				[
-					'icon' => [
+				array(
+					'icon' => array(
 						'color'        => '#c00',
 						'icon'         => 'circle-x',
 						'stroke-width' => '2px',
 						'height'       => '32px',
 						'width'        => '32px',
-					],
-					'aria' => [
+					),
+					'aria' => array(
 						'controls' => $abs_args['id'],
-					],
-				]
+					),
+				)
 			);
 		else :
 			print_element(
 				'icon',
-				[
+				array(
 					'svg_args' => $abs_args['icon'],
-				]
+				)
 			);
 		endif;
 	endif;

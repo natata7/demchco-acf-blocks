@@ -23,15 +23,15 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\print_svg;
 
-$abs_defaults = [
-	'class'    => [ 'demchco-element', 'demchco-element-icon' ],
-	'svg_args' => [],
-];
+$abs_defaults = array(
+	'class'    => array( 'demchco-element', 'demchco-element-icon' ),
+	'svg_args' => array(),
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 
 ?>
 <span <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php print_svg( $abs_args['svg_args'] ); ?></span>

@@ -10,10 +10,10 @@
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class' => [ 'demchco-element', 'demchco-element-eyebrow' ],
+$abs_defaults = array(
+	'class' => array( 'demchco-element', 'demchco-element-eyebrow' ),
 	'text'  => false,
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -21,7 +21,7 @@ $abs_args = get_formatted_args( $args, $abs_defaults );
 if ( $abs_args['text'] ) :
 
 	// Set up element attributes.
-	$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+	$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 
 	?>
 	<span <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo esc_html( $abs_args['text'] ); ?></span>

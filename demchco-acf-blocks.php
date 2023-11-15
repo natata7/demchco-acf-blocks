@@ -69,11 +69,11 @@ add_action( 'acf/init', __NAMESPACE__ . '\register_blocks' );
  * @return void
  */
 function include_helper_files() {
-	$files = [
+	$files = array(
 		'inc/helpers/',
 		'wpcli/',
 		'inc/',
-	];
+	);
 
 	foreach ( $files as $include ) {
 		$include = trailingslashit( DEMCHCO_ROOT_PATH ) . $include;

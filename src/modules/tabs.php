@@ -9,15 +9,15 @@ use function demchco\blocks\print_element;
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class' => [ 'demchco-module', 'demchco-module-tabs' ],
-	'items' => [],
-];
+$abs_defaults = array(
+	'class' => array( 'demchco-module', 'demchco-module-tabs' ),
+	'items' => array(),
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 ?>
 <div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<nav role="tablist">
@@ -25,16 +25,16 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 			<?php
 			print_element(
 				'button',
-				[
-					'class' => [ 'tab-title' ],
+				array(
+					'class' => array( 'tab-title' ),
 					'id'    => 'tab-item-' . $abs_key,
 					'title' => $abs_item['text'],
 					'role'  => 'tab',
-					'aria'  => [
+					'aria'  => array(
 						'controls' => 'tab-content-' . $abs_key,
 						'selected' => 0 === $abs_key ? 'true' : 'false',
-					],
-				]
+					),
+				)
 			);
 			?>
 		<?php endforeach; ?>

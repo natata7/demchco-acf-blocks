@@ -10,11 +10,11 @@ namespace demchco\blocks;
  *
  * @param array $args The parameters needed to get the SVG.
  */
-function print_svg( $args = [] ) {
+function print_svg( $args = array() ) {
 	$kses_defaults = wp_kses_allowed_html( 'post' );
 
-	$svg_args = [
-		'svg'   => [
+	$svg_args = array(
+		'svg'   => array(
 			'class'           => true,
 			'aria-hidden'     => true,
 			'aria-labelledby' => true,
@@ -25,20 +25,20 @@ function print_svg( $args = [] ) {
 			'viewbox'         => true, // <= Must be lower case!
 			'color'           => true,
 			'stroke-width'    => true,
-		],
-		'g'     => [ 'color' => true ],
-		'title' => [
+		),
+		'g'     => array( 'color' => true ),
+		'title' => array(
 			'title' => true,
 			'id'    => true,
-		],
-		'path'  => [
+		),
+		'path'  => array(
 			'd'     => true,
 			'color' => true,
-		],
-		'use'   => [
+		),
+		'use'   => array(
 			'xlink:href' => true,
-		],
-	];
+		),
+	);
 
 	$allowed_tags = array_merge(
 		$kses_defaults,

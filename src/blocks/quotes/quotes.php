@@ -12,19 +12,19 @@ use function demchco\blocks\setup_block_defaults;
 $abs_block = isset( $block ) ? $block : '';
 $abs_args  = isset( $args ) ? $args : '';
 
-$abs_defaults = [
-	'class'               => [ 'demchco-block', 'demchco-block-quotes' ],
-	'allowed_innerblocks' => [ 'core/heading', 'core/paragraph' ],
+$abs_defaults = array(
+	'class'               => array( 'demchco-block', 'demchco-block-quotes' ),
+	'allowed_innerblocks' => array( 'core/heading', 'core/paragraph' ),
 	'id'                  => ( isset( $block ) && ! empty( $block['anchor'] ) ) ? $block['anchor'] : '',
-	'fields'              => [], // Fields passed via the print_block() function.
-];
+	'fields'              => array(), // Fields passed via the print_block() function.
+);
 
 // Returns updated $abs_defaults array with classes from Gutenberg or from the print_block() function.
 // Returns formatted attributes as $abs_atts array.
 [ $abs_defaults, $abs_atts ] = setup_block_defaults( $abs_args, $abs_defaults, $abs_block );
 
 // Pull in the fields from ACF, if we've not pulled them in using print_block().
-$abs_quotes = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( [ 'quotes' ], $block['id'] );
+$abs_quotes = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get_acf_fields( array( 'quotes' ), $block['id'] );
 ?>
 
 <?php if ( ! empty( $block['data']['_is_preview'] ) ) : ?>
@@ -46,11 +46,11 @@ $abs_quotes = ! empty( $abs_defaults['fields'] ) ? $abs_defaults['fields'] : get
 				<?php
 				print_element(
 					'blockquote',
-					[
+					array(
 						'quote' => $abs_quote['quote'],
 						'cite'  => $abs_quote['cite'],
-						'class' => [ 'block-content' ],
-					]
+						'class' => array( 'block-content' ),
+					)
 				);
 				?>
 			</div>

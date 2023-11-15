@@ -9,15 +9,16 @@ namespace demchco\blocks;
 
 /**
  * Prints HTML with date information for the current post.
+ *
  * @param array $args Configuration args.
  */
-function print_post_date( $args = [] ) {
+function print_post_date( $args = array() ) {
 
 	// Set defaults.
-	$defaults = [
+	$defaults = array(
 		'date_text'   => esc_html__( 'Posted on', 'abs' ),
 		'date_format' => get_option( 'date_format' ),
-	];
+	);
 
 	// Parse args.
 	$args = wp_parse_args( $args, $defaults );

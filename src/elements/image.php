@@ -11,14 +11,14 @@ use function demchco\blocks\get_attachment_id_from_url;
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class'         => [ 'demchco-element', 'demchco-element-image' ],
+$abs_defaults = array(
+	'class'         => array( 'demchco-element', 'demchco-element-image' ),
 	'attachment_id' => false,
 	'src'           => false,
 	'size'          => 'large',
 	'loading'       => 'lazy',
 	'alt'           => '',
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -33,9 +33,9 @@ if ( $abs_args['attachment_id'] ) :
 	endif;
 
 	// Set up element attributes.
-	$abs_atts = [];
+	$abs_atts = array();
 
-	foreach ( [ 'loading', 'alt' ] as $abs_att ) :
+	foreach ( array( 'loading', 'alt' ) as $abs_att ) :
 		if ( $abs_args[ $abs_att ] ) :
 			$abs_atts[ $abs_att ] = $abs_args[ $abs_att ];
 		endif;
@@ -55,7 +55,7 @@ if ( $abs_args['attachment_id'] ) :
 
 else :
 	// Set up element attributes.
-	$abs_atts = get_formatted_atts( [ 'class', 'src', 'loading', 'alt' ], $abs_args );
+	$abs_atts = get_formatted_atts( array( 'class', 'src', 'loading', 'alt' ), $abs_args );
 	?>
 	<img <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>/>
 	<?php

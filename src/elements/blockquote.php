@@ -10,12 +10,12 @@
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class' => [ 'demchco-element', 'demchco-element-blockquote' ],
+$abs_defaults = array(
+	'class' => array( 'demchco-element', 'demchco-element-blockquote' ),
 	'id'    => '',
 	'cite'  => false,
 	'quote' => false,
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -23,7 +23,7 @@ $abs_args = get_formatted_args( $args, $abs_defaults );
 if ( $abs_args['quote'] ) :
 
 	// Set up element attributes.
-	$abs_atts = get_formatted_atts( [ 'class', 'id' ], $abs_args );
+	$abs_atts = get_formatted_atts( array( 'class', 'id' ), $abs_args );
 	?>
 	<blockquote>
 		<p><?php echo esc_html( $abs_args['quote'] ); ?></p>

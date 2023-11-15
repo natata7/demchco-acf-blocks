@@ -11,19 +11,19 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\get_attachment_id_from_url;
 
-$abs_defaults = [
-	'class'     => [ 'demchco-element', 'demchco-element-logo' ],
+$abs_defaults = array(
+	'class'     => array( 'demchco-element', 'demchco-element-logo' ),
 	'logo_name' => '',
 	'loading'   => 'eager',
 	'alt'       => get_bloginfo( 'name' ) . ' logo',
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$abs_logo_atts = [];
+$abs_logo_atts = array();
 
-foreach ( [ 'loading', 'alt' ] as $abs_att ) :
+foreach ( array( 'loading', 'alt' ) as $abs_att ) :
 	if ( $abs_args[ $abs_att ] ) :
 		$abs_logo_atts[ $abs_att ] = $abs_args[ $abs_att ];
 	endif;
@@ -37,7 +37,7 @@ else :
 endif;
 
 // Set up logo class.
-$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 ?>
 
 <span <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>

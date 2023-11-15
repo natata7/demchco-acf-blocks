@@ -11,10 +11,10 @@ namespace demchco\blocks;
  * @param array $args Array of settings passed to the element.
  * @param array $defaults Array of default settings for the element.
  */
-function get_formatted_args( $args = [], $defaults ) {
+function get_formatted_args( $args = array(), $defaults ) {
 
 	// Set the 'class' array key if it doesn't exist.
-	$args['class'] = array_key_exists( 'class', $args ) ? $args['class'] : [];
+	$args['class'] = array_key_exists( 'class', $args ) ? $args['class'] : array();
 
 	// Allow class to be passed as a string or an array.
 	$args['class'] = ( $args['class'] && ! is_array( $args['class'] ) ) ? explode( ' ', $args['class'] ) : $args['class'];

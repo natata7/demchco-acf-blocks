@@ -12,12 +12,12 @@ namespace demchco\blocks;
  *
  * @param array $args Configuration args.
  */
-function print_post_author( $args = [] ) {
+function print_post_author( $args = array() ) {
 
 	// Set defaults.
-	$defaults = [
+	$defaults = array(
 		'author_text' => esc_html__( 'by', 'demchco' ),
-	];
+	);
 
 	// Parse args.
 	$args = wp_parse_args( $args, $defaults );

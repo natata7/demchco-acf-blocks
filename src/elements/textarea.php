@@ -10,15 +10,15 @@
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class'       => [ 'demchco-element', 'demchco-element-textarea' ],
+$abs_defaults = array(
+	'class'       => array( 'demchco-element', 'demchco-element-textarea' ),
 	'name'        => '',
 	'value'       => '',
 	'placeholder' => false,
 	'disabled'    => false,
 	'required'    => false,
 	'readonly'    => false,
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -28,7 +28,7 @@ if ( $abs_args['name'] ) :
 endif;
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'readonly' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'readonly' ), $abs_args );
 
 ?>
 <textarea <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>><?php echo esc_html( $abs_args['value'] ); ?></textarea>

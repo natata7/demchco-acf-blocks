@@ -11,16 +11,16 @@ use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\print_svg;
 
-$abs_defaults = [
-	'class'         => [ 'demchco-element', 'demchco-element-badge' ],
+$abs_defaults = array(
+	'class'         => array( 'demchco-element', 'demchco-element-badge' ),
 	'id'            => '',
 	'text'          => false,
 	'href'          => false,
 	'target'        => false,
 	'type'          => false,
-	'icon'          => [],
+	'icon'          => array(),
 	'icon_position' => 'after', // before, after.
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
@@ -33,7 +33,7 @@ if ( $abs_args['text'] ) :
 	endif;
 
 	// Set up element attributes.
-	$abs_atts = get_formatted_atts( [ 'id', 'href', 'target', 'class', 'type' ], $abs_args );
+	$abs_atts = get_formatted_atts( array( 'id', 'href', 'target', 'class', 'type' ), $abs_args );
 
 	?>
 	<<?php echo $abs_args['href'] ? 'a' : 'span'; ?> <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>

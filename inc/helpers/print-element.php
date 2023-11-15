@@ -8,7 +8,7 @@ namespace demchco\blocks;
  * @param string $element_name The name of the element.
  * @param array  $args Args for the element.
  */
-function print_element( $element_name = '', $args = [] ) {
+function print_element( $element_name = '', $args = array() ) {
 	if ( ! $element_name ) {
 		return;
 	}

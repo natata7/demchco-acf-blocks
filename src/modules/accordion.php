@@ -9,15 +9,15 @@ use function demchco\blocks\print_element;
 use function demchco\blocks\get_formatted_args;
 use function demchco\blocks\get_formatted_atts;
 
-$abs_defaults = [
-	'class' => [ 'demchco-module', 'demchco-module-accordion' ],
-	'items' => [],
-];
+$abs_defaults = array(
+	'class' => array( 'demchco-module', 'demchco-module-accordion' ),
+	'items' => array(),
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 ?>
 
 <div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
@@ -26,20 +26,20 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 			<?php
 			print_element(
 				'button',
-				[
-					'class' => [ 'accordion-title' ],
+				array(
+					'class' => array( 'accordion-title' ),
 					'id'    => 'accordion-item-' . $abs_key,
 					'title' => $abs_item['text'],
-					'aria'  => [
+					'aria'  => array(
 						'controls' => 'accordion-content-' . $abs_key,
-					],
-					'icon'  => [
+					),
+					'icon'  => array(
 						'color'  => '#000',
 						'icon'   => 'caret-down',
 						'height' => '24',
 						'width'  => '24',
-					],
-				]
+					),
+				)
 			);
 			?>
 
@@ -51,10 +51,10 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 			<?php
 			print_element(
 				'content',
-				[
-					'class'   => [ 'accordion-content' ],
+				array(
+					'class'   => array( 'accordion-content' ),
 					'content' => $abs_item['content'],
-				]
+				)
 			);
 			?>
 			</div>

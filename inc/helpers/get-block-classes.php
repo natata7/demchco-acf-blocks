@@ -13,7 +13,7 @@ namespace demchco\blocks;
  * return array The updated array of classes.
  */
 function get_block_classes( $block ) {
-	$abs_block_classes = [];
+	$abs_block_classes = array();
 
 	if ( ! empty( $block['className'] ) ) :
 		$abs_block_classes[] = $block['className'];

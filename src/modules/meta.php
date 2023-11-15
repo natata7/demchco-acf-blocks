@@ -31,20 +31,20 @@ use function demchco\blocks\print_post_author;
 use function demchco\blocks\print_post_date;
 use function demchco\blocks\print_post_taxonomies;
 
-$abs_defaults = [
-	'class'            => [ 'demchco-module', 'demchco-module-meta', 'entry-meta' ],
+$abs_defaults = array(
+	'class'            => array( 'demchco-module', 'demchco-module-meta', 'entry-meta' ),
 	'display_date'     => true,
 	'display_author'   => true,
 	'display_taxonomy' => false,
-	'date_args'        => [],
-	'author_args'      => [],
-	'taxonomy_args'    => [],
-];
+	'date_args'        => array(),
+	'author_args'      => array(),
+	'taxonomy_args'    => array(),
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 ?>
 
 <div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>

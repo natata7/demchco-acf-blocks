@@ -12,8 +12,8 @@ use function demchco\blocks\print_module;
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class'         => [ 'demchco-module', 'demchco-module-card' ],
+$abs_defaults = array(
+	'class'         => array( 'demchco-module', 'demchco-module-card' ),
 	'eyebrow'       => false,
 	'heading'       => false,
 	'content'       => false,
@@ -21,12 +21,12 @@ $abs_defaults = [
 	'attachment_id' => false,
 	'src'           => false,
 	'meta'          => false,
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class' ), $abs_args );
 
 ?>
 <div <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
@@ -35,11 +35,11 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	if ( $abs_args['attachment_id'] || $abs_args['src'] ) :
 		print_element(
 			'image',
-			[
+			array(
 				'attachment_id' => $abs_args['attachment_id'],
 				'src'           => $abs_args['src'],
 				'class'         => 'aspectratio-3-2',
-			]
+			)
 		);
 	endif;
 
@@ -47,9 +47,9 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	if ( $abs_args['eyebrow'] ) :
 		print_element(
 			'eyebrow',
-			[
+			array(
 				'text' => $abs_args['eyebrow'],
-			]
+			)
 		);
 	endif;
 
@@ -57,10 +57,10 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	if ( $abs_args['heading'] ) :
 		print_element(
 			'heading',
-			[
+			array(
 				'text'  => $abs_args['heading'],
 				'level' => 2,
-			]
+			)
 		);
 	endif;
 
@@ -73,9 +73,9 @@ $abs_atts = get_formatted_atts( [ 'class' ], $abs_args );
 	if ( $abs_args['content'] ) :
 		print_element(
 			'content',
-			[
+			array(
 				'content' => $abs_args['content'],
-			]
+			)
 		);
 	endif;
 

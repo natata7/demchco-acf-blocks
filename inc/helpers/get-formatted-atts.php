@@ -12,7 +12,7 @@ namespace demchco\blocks;
  * @param array $args Args for the element.
  */
 function get_formatted_atts( $atts, $args ) {
-	$atts_formatted = [];
+	$atts_formatted = array();
 
 	foreach ( $atts as $att ) :
 		if ( array_key_exists( $att, $args ) && $args[ $att ] ) :

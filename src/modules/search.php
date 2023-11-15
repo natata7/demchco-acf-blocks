@@ -11,18 +11,18 @@ use function demchco\blocks\print_element;
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class'       => [ 'demchco-module', 'demchco-module-search' ],
+$abs_defaults = array(
+	'class'       => array( 'demchco-module', 'demchco-module-search' ),
 	'action'      => home_url( '/' ),
 	'method'      => 'get',
 	'placeholder' => false,
 	'button_text' => false,
-];
+);
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'class', 'method', 'action' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'class', 'method', 'action' ), $abs_args );
 
 ?>
 <form <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
@@ -30,23 +30,23 @@ $abs_atts = get_formatted_atts( [ 'class', 'method', 'action' ], $abs_args );
 	// Input.
 	print_element(
 		'input',
-		[
-			'class'       => [],
+		array(
+			'class'       => array(),
 			'type'        => 'text',
 			'name'        => 's',
 			'value'       => get_search_query(),
 			'placeholder' => esc_html__( 'Search', 'demchco' ),
-		]
+		)
 	);
 
 	// Submit.
 	print_element(
 		'button',
-		[
-			'class' => [],
+		array(
+			'class' => array(),
 			'type'  => 'submit',
 			'text'  => esc_html__( 'Search', 'demchco' ),
-		]
+		)
 	);
 	?>
 </form>

@@ -10,15 +10,15 @@ namespace demchco\blocks;
  *
  * @param array $args Configuration args.
  */
-function print_post_taxonomies( $args = [] ) {
+function print_post_taxonomies( $args = array() ) {
 
 	// Set defaults.
-	$defaults = [
+	$defaults = array(
 		'tax_name' => '',
 		'post_id'  => get_the_ID(),
 		'linked'   => true,
 		'in_list'  => true,
-	];
+	);
 
 	// Parse args.
 	$args = wp_parse_args( $args, $defaults );
@@ -42,10 +42,10 @@ function print_post_taxonomies( $args = [] ) {
 			if ( $args['linked'] ) :
 				print_element(
 					'anchor',
-					[
+					array(
 						'text' => $abs_term->name,
 						'href' => get_term_link( $abs_term->term_id, $args['tax_name'] ),
-					]
+					)
 				);
 			else :
 				echo esc_html( $abs_term->name );

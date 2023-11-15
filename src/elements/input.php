@@ -10,15 +10,15 @@
 use function demchco\blocks\get_formatted_atts;
 use function demchco\blocks\get_formatted_args;
 
-$abs_defaults = [
-	'class'       => [ 'demchco-element', 'demchco-element-button' ],
+$abs_defaults = array(
+	'class'       => array( 'demchco-element', 'demchco-element-button' ),
 	'type'        => 'text',
 	'name'        => '',
 	'value'       => '',
 	'placeholder' => false,
 	'disabled'    => false,
 	'required'    => false,
-];
+);
 
 
 $abs_args = get_formatted_args( $args, $abs_defaults );
@@ -29,7 +29,7 @@ if ( $abs_args['name'] ) :
 endif;
 
 // Set up element attributes.
-$abs_atts = get_formatted_atts( [ 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'value' ], $abs_args );
+$abs_atts = get_formatted_atts( array( 'id', 'name', 'placeholder', 'class', 'type', 'disabled', 'required', 'value' ), $abs_args );
 
 ?>
 <input <?php echo $abs_atts; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>/>

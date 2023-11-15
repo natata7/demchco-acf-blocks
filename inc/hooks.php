@@ -14,7 +14,7 @@ namespace demchco\blocks;
 function blocks_acf_json_save_point( $path ) {
 
 	// Update the path.
-	$path = plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';
+	$path = plugin_dir_path( __DIR__ ) . '/acf-json';
 
 	return $path;
 }
@@ -32,7 +32,7 @@ function acf_blocks_acf_json_load_point( $paths ) {
 	unset( $paths[0] );
 
 	// Append the new path.
-	$paths[] = plugin_dir_path( dirname( __FILE__ ) ) . '/acf-json';
+	$paths[] = plugin_dir_path( __DIR__ ) . '/acf-json';
 
 	return $paths;
 }

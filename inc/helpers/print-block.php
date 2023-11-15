@@ -43,7 +43,7 @@ namespace demchco\blocks;
  * @param string $block_name The name of the block.
  * @param array  $args Args for the block.
  */
-function print_block( $block_name = '', $args = [] ) {
+function print_block( $block_name = '', $args = array() ) {
 	if ( ! $block_name ) {
 		return;
 	}
